@@ -1,28 +1,188 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Quote />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Quote from './components/Quote.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Quote
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    html, body {
+      overflow-x: hidden;
+      overflow-y: hidden; 
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: black;
+      background-image: url('https://wallpapercave.com/wp/5KLTq1z.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      z-index: -2;
+    }
+
+    #display {
+      color: white;
+      font-size: 2.9em;
+      top: 10px;
+      border-bottom: thin solid;
+      padding-bottom: 20px;
+      opacity: 0.80;
+      filter: alpha(opacity=80); /* For IE8 and earlier */
+    }
+
+    #date {
+      color: white;
+      font-size: 1.3em;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: normal;
+      letter-spacing: 0.2em;
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+
+    #footer {
+      width: 100%;
+      height: 40px;
+      position: fixed;
+      bottom: -1px;
+      background-color: white;
+      text-align: center;
+      opacity: 0.5;
+      filter: alpha(opacity=50); /* For IE8 and earlier */
+    }
+
+    #line {
+      width: 100%;
+      bottom: 4em;
+      position: fixed;
+      border-bottom: solid white;
+      padding: 15px;
+      opacity: 0.5;
+      filter: alpha(opacity=50); /* For IE8 and earlier */
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+
+    .wrapper {
+      background-color: red;
+    }
+
+    span {
+      border-radius: 100px;
+      opacity: 0.75;
+      filter: alpha(opacity=75); /* For IE8 and earlier */
+    }
+
+    #content {
+      height: 45em;
+    } 
+    p {
+      max-width: 30em;
+      color: white;
+      font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+      letter-spacing:0.1em;
+      text-align:center;
+      margin: 40px auto;
+      text-transform: lowercase;
+      line-height: 145%;
+      font-size: 2em;
+      font-variant: small-caps;
+    }
+
+    p :hover {
+      text-decoration: none;
+    }
+
+    .container {
+      padding-top: 3em;
+      text-align: center;
+    }
+
+    #b-nav {
+      padding-bottom: 0em;
+      position: fixed;
+      width: 100%;
+      bottom: 2em;
+    }
+
+    #b-nav ul {
+      margin: 0;
+      padding: 0.5em;
+      list-style-type: none;
+      text-align: center;
+    }
+
+    #b-nav ul li {
+      display: inline;
+    }
+
+    #b-nav ul li a {
+      text-decoration: none;
+      padding: .2em 1em;
+      background-color: black;
+      opacity: 0.4;
+      filter: alpha(opacity=40); /* For IE8 and earlier */
+    }
+
+    .hold {
+      width: 100%;
+      text-align: left;
+    }
+
+    #gen {
+      outline: none;
+      padding-top: 5px;
+      text-decoration: none;
+      opacity: 0.6;
+      background-color: black;
+      color: white;
+      border: thin solid white;
+      height: 40px;
+      width: 100px;
+      border-radius: 2px;
+      transition: 0.5s;
+      padding-bottom: 5px;
+      cursor:pointer;
+    }
+
+    #gen:hover {
+      background-color: white;
+      color: black;
+      border: thin solid black;
+      opacity: 0.8;
+    }
+
+    #gen a {
+      text-decoration: none;
+    }
+
+    #date {
+      color: white;
+    }
+
+    @media screen 
+    and (max-device-width: 800px) 
+      and (max-device-height: 640px) 
+      and (-webkit-device-pixel-ratio: 2) 
+      and (orientation: portrait) {
+        p {
+          font-size: 1em;
+        }
+    }
+
 </style>
